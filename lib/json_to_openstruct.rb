@@ -1,3 +1,4 @@
+require 'json'
 require 'string_helper'
 
 module JsonToOpenStruct
