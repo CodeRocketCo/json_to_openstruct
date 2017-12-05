@@ -7,22 +7,28 @@ There is also a `OpenStruct#join` method adding possibility to replace values in
 
 From the command line:
 
-    $ gem install json-to-openstruct
+    $ gem install json_to_openstruct
 
 Or in your *Gemfile*:
 
-    $ gem 'json-to-openstruct'
+    $ gem 'json_to_openstruct'
 
 ## Usage
 
 Just open `OpenStruct` class and include `JsonToOpenStruct` (save somewhere *openstruct.rb* with the following content):
 
 ```ruby
-require  'json-to-openstruct'
+require  'json_to_openstruct'
 
 class OpenStruct
   include JsonToOpenStruct
 end
+```
+
+If you get `uninitialized constant OpenStruct (NameError)`, require `OpenStruct` manually:
+
+```ruby
+require 'ostruct'
 ```
 
 Let's consider such json:
